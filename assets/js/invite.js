@@ -121,7 +121,7 @@ function changeSlide () {
                 selectInput.selectedIndex = 0;
                 return;
             }
-            const [name, guests] = line.split(';');
+            const [name, guests] = line;
             csvData[name] = parseInt(guests);
             option.value = name;
             option.innerHTML = name;
