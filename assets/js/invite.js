@@ -86,30 +86,47 @@ function changeSlide () {
         // Read csv from the same domain
         const url = window.location.origin;
 
-        const csvFile = new XMLHttpRequest();
-        csvFile.open("GET", `${url}/assets/media/lista.csv`, true);
-        csvFile.onreadystatechange = function () {
-            if( csvFile.readyState === 4 && csvFile.status === 200 ) {
-                const allText = csvFile.responseText;
-                const lines = allText.split('\n');
-                lines.forEach( (line, index) => {
-                    const option = document.createElement('option');
-                    if( index === 0 ) {
-                        option.value = '';
-                        option.innerHTML = 'Selecciona tu nombre';
-                        selectInput.appendChild(option);
-                        selectInput.selectedIndex = 0;
-                        return;
-                    }
-                    const [name, guests] = line.split(';');
-                    csvData[name] = parseInt(guests);
-                    option.value = name;
-                    option.innerHTML = name;
-                    selectInput.appendChild(option);
-                })
+        const lines = [
+            ["Nombre","Invitados"],
+            ["Marta Rico Hernández","3"],
+            ["Francisco Zamora Rico","1"],
+            ["Wenceslao Rico Hernández","3"],
+            ["José Luis Herrada","3"],
+            ["Gilberto Eduardo Rico","3"],
+            ["Christian Chávez","2"],
+            ["Manuel Santos Torres","3"],
+            ["Francisco De la Peña","3"],
+            ["José Juan Chávez","5"],
+            ["Oscar Quintanar","3"],
+            ["Samuel Said Apaez García","1"],
+            ["Juan Carlos Apaez","1"],
+            ["Juan Jesús García","2"],
+            ["Jorge Meléndez","2"],
+            ["Monica Daría Castorena","3"],
+            ["Alberto Torres","3"],
+            ["Amparo Rico Cortés","0"],
+            ["Salome Hernández Solano","1"],
+            ["Vicente Ramírez Hernández","1"],
+            ["Jaime Cortés","4"],
+            ["Eva Meléndez Rico","2"],
+            ["Graciela Hernández","1"],
+            ["Karla Apaez García","1"]
+        ]
+        lines.forEach( (line, index) => {
+            const option = document.createElement('option');
+            if( index === 0 ) {
+                option.value = '';
+                option.innerHTML = 'Selecciona tu nombre';
+                selectInput.appendChild(option);
+                selectInput.selectedIndex = 0;
+                return;
             }
-        }
-        csvFile.send();
+            const [name, guests] = line.split(';');
+            csvData[name] = parseInt(guests);
+            option.value = name;
+            option.innerHTML = name;
+            selectInput.appendChild(option);
+        })
 
         addFormListener();
     }
