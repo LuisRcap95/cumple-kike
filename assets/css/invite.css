@@ -1,0 +1,213 @@
+@import url('https://fonts.cdnfonts.com/css/empire-crown');
+@import url('https://fonts.cdnfonts.com/css/valerius');
+
+body {
+    background-color: black;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+#container {
+    margin: 0px;
+    padding: 0px;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+/* Background framevideo */
+#framevideo {
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    z-index: -1;
+}
+
+.slider_caption {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000063;
+    padding: 5%;
+    color: white;
+    z-index: 20;
+}
+
+.span-message {
+    font-size: 18px !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+}
+
+.slider_caption a {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+    color: #87b3dd;
+    text-decoration: underline;
+}
+
+.btn-container {
+    min-width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container button {
+    background-color: #222;
+    margin-bottom: 30px !important;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(
+        to right,
+        #0a1d8b 5%,
+        #0e249c 10%,
+        #4176a7 30%,
+        #26537e 50%,
+        #433bb3 70%,
+        #29237a 80%,
+        #0a1d8b 95%
+    ) 1;
+    color: #239b33;
+    width: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-container button:hover {
+    background-color: #0a1d8b;
+    color: #239b33;
+    border-image: linear-gradient(
+        to right,
+        #0a1d8b 5%,
+        #0e249c 10%,
+        #4176a7 30%,
+        #26537e 50%,
+        #433bb3 70%,
+        #29237a 80%,
+        #0a1d8b 95%
+    ) 1;
+    color: #ccc;
+}
+
+#inviteForm {
+    min-width: 350px;
+    min-height: 300px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../media/board-form.avif");
+    padding: 20px 2px 20px 20px;
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid 1.25em transparent;
+    --mask: radial-gradient(closest-side, red calc(100% - 1.25em - 0.75em - 1px), transparent calc(100% - 1.25em - 0.75em) calc(100% - 1.25em), red calc(100% - 1.25em + 1px) calc(100% - 1px), transparent);
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+
+.pap-input {
+    width: 80%;
+    border-style: none;
+    color: #d6e772;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    text-align: center;
+    border-radius: 0px 0px 5px 0px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+#hosts {
+    width: 80%;
+    border-style: none;
+    color: #d6e772;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    border-radius: 0px 0px 5px 0px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+#hosts::placeholder{
+    color: #d6e772;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#hosts option{
+    color: #d6e772;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #353b39;
+}
+
+.pap-input::placeholder{
+    color: #d6e772;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pap-input:focus, #hosts{
+    outline: none;
+    font-weight: bold;
+}
+
+.pap-btn {
+    background-color: #0a1d8b;
+    color: #d6e772;
+    width: 100px;
+    border-style: none;
+    border: 2px solid #42271d;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.pap-btn:hover {
+    background-color: #42271d;
+    color: #ddd;
+    border-bottom: 2px solid #851313;
+}
+
+.message-form-err {
+    margin: 10px;
+    max-width: 140px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #dc3546a1;
+}
+.message-form-succ {
+    margin: 10px;
+    max-width: 140px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #28a745;
+}
