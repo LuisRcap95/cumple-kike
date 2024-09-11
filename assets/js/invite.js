@@ -88,30 +88,33 @@ function changeSlide () {
 
         const lines = [
             ["Nombre","Invitados"],
-            ["Marta Rico Hernández","3"],
-            ["Francisco Zamora Rico","1"],
-            ["Wenceslao Rico Hernández","3"],
-            ["José Luis Herrada","3"],
-            ["Gilberto Eduardo Rico","3"],
-            ["Christian Chávez","2"],
-            ["Manuel Santos Torres","3"],
-            ["Francisco De la Peña","3"],
-            ["José Juan Chávez","5"],
-            ["Oscar Quintanar","3"],
-            ["Samuel Said Apaez García","1"],
-            ["Juan Carlos Apaez","1"],
-            ["Juan Jesús García","2"],
-            ["Jorge Meléndez","2"],
-            ["Monica Daría Castorena","3"],
             ["Alberto Torres","3"],
             ["Amparo Rico Cortés","0"],
-            ["Salome Hernández Solano","1"],
-            ["Vicente Ramírez Hernández","1"],
-            ["Jaime Cortés","4"],
+            ["Celia Jiménez","0"],
+            ["Christian Chávez","2"],
             ["Eva Meléndez Rico","2"],
+            ["Francisco De la Peña","3"],
+            ["Francisco Zamora Rico","1"],
+            ["Gilberto Eduardo Rico","3"],
             ["Graciela Hernández","1"],
-            ["Karla Apaez García","1"]
-        ]
+            ["Jaime Cortés","4"],
+            ["Jesús Cortes Jiménez","1"],
+            ["Jorge Meléndez","2"],
+            ["José Juan Chávez","5"],
+            ["José Luis Herrada","3"],
+            ["Juan Carlos Apaez","1"],
+            ["Juan Jesús García","2"],
+            ["Karla Apaez García","1"],
+            ["Luis Fabian Cortes Jiménez","1"],
+            ["Marta Rico Hernández","3"],
+            ["Monica Daría Castorena","3"],
+            ["Oscar Quintanar","3"],
+            ["Roberto Cortes Jiménez","1"],
+            ["Salome Hernández Solano","1"],
+            ["Samuel Said Apaez García","1"],
+            ["Vicente Ramírez Hernández","1"],
+            ["Wenceslao Rico Hernández","3"]
+        ].sort((a, b) => a[0].localeCompare(b[0]));
         lines.forEach( (line, index) => {
             const option = document.createElement('option');
             if( index === 0 ) {
