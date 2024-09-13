@@ -112,6 +112,7 @@ function changeSlide () {
             ["Salome Hernández Solano","1"],
             ["Samuel Said Apaez García","1"],
             ["Vicente Ramírez Hernández","1"],
+            ["Victor Cortes Jiménez","1"],
             ["Wenceslao Rico Hernández","3"]
         ];
         lines.forEach( (line, index) => {
