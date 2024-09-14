@@ -89,6 +89,7 @@ function changeSlide () {
         const lines = [
             ["Alberto Torres","3"],
             ["Amparo Rico Cortés","0"],
+            ["Bryant Ayala","1"],
             ["Celia Jiménez","0"],
             ["Christian Chávez","2"],
             ["Eva Meléndez Rico","2"],
